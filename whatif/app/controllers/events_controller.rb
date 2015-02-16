@@ -27,6 +27,7 @@ class EventsController < ActionController::Base
   def show
       event = Event.find(params["id"])
       effects = event.effects
+      binding.pry
       respond_to do |format|
       format.json {render :json => effects}
       format.html{render '/events'}

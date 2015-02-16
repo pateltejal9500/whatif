@@ -3,7 +3,7 @@ class EffectsController < ActionController::Base
    def create
     
       effect = {
-      effects: params["effect"],
+      consequence: params["consequence"],
       event_id: params["event_id"],
       emotion: params["emotion"]
     }

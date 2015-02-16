@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150216021130) do
+ActiveRecord::Schema.define(version: 20150216052321) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "effects", id: false, force: true do |t|
     t.integer "event_id"
-    t.string  "effects"
+    t.string  "consequence"
     t.string  "emotion"
   end
 

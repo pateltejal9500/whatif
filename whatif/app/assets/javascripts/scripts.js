@@ -44,7 +44,7 @@ $(function(){
         success: function(result){
             $(".here").append("<ul id='effectlist'>Effects</ul>")
              for (var i = 0; i < result.length; i++){ 
-             $("#effectlist").append("<li>"+result[i].effects+" " + result[i].emotion+"</li>")
+             $("#effectlist").append("<li>"+result[i].consequence+" " + result[i].emotion+"</li>")
            }
 
         }
@@ -71,7 +71,7 @@ function addingEffect(id){
     $.ajax({
     url: '/effects',
     type: 'POST',
-    data : {effect: effect, emotion: emotion, event_id: id},
+    data : {consequence: effect, emotion: emotion, event_id: id},
     success: function(result){
      window.location.reload()
      alert("Effect was Added")
