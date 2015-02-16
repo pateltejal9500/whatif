@@ -45,7 +45,7 @@ $(function(){
         success: function(result){
             $(".here").append("<ul id='effectlist'>Effects</ul>")
              for (var i = 0; i < result.length; i++){ 
-             $("#effectlist").append("<li>"+result[i].effects+"</li>")
+             $("#effectlist").append("<li>"+result[i].effects+" " + result[i].emotion+"</li>")
            }
 
         }
