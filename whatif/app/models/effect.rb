@@ -1,3 +1,3 @@
 class Effect < ActiveRecord::Base
-belongs_to :events
+ belongs_to :events
 end

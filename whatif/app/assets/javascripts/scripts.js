@@ -39,9 +39,8 @@ $(function(){
       }
 
       $.ajax({
-        url: "/effects",
+        url: "/events/"+result.id,
         type: 'GET',
-        data: {id: result.id},
         success: function(result){
             $(".here").append("<ul id='effectlist'>Effects</ul>")
              for (var i = 0; i < result.length; i++){ 
@@ -50,8 +49,6 @@ $(function(){
 
         }
       })
-
-  
         
     addSolution(result.id)
     addEffect(result.id)
@@ -70,7 +67,7 @@ function addingEffect(id){
   $("#addeffect"+id).click(function(event){
   var effect = $("input[name='effect']").val()
   var emotion = $("select[name='emotion']").val()
-  debugger
+ 
     $.ajax({
     url: '/effects',
     type: 'POST',

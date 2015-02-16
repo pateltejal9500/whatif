@@ -15,11 +15,5 @@ class EffectsController < ActionController::Base
     end
   end
   
- def index
-  effects = Effect.where(event_id: params["id"])
-  respond_to do |format|
-      format.json {render :json => effects}
-      format.html {render '/events'}
-    end
- end
+
 end
